@@ -79,7 +79,7 @@ function(input, output, session){
       print("Stock_Chaser")
       print(Stock_Chaser)
       
-      Forklift<- dsm[5,8]
+      ForkliftV<- dsm[5,8]
       print("Tugger_Cart")
       print(Tugger_Cart)
       
@@ -91,9 +91,9 @@ function(input, output, session){
       print("Pallet_Jack_Electric")
       print(Pallet_Jack_Electric)
       
-      Reach_Trucks<- dsm[8,8]
-      print("Reach_Trucks")
-      print(Reach_Trucks)
+      ReachTrucks<- dsm[8,8]
+      print("ReachTrucks")
+      print(ReachTrucks)
       
       AGV<- dsm[9,8]
       print("AGV")
@@ -102,6 +102,39 @@ function(input, output, session){
       Pallet_Stacker<- dsm[10,8]
       print("Pallet_Stacker")
       print(Pallet_Stacker)
+      
+      output$SChaser<- renderbs4ValueBox(
+        bs4ValueBox(value = round(as.numeric(Stock_Chaser),2), subtitle = "Storck Chaser", status = "success",
+                    footer = "Rating On a Scale of 5", icon = "database", width = 12)
+      )
+      output$P_Cart<- renderbs4ValueBox(
+        bs4ValueBox(value = round(as.numeric(Powered_Cart),2), subtitle = "Powered Cart", status = "warning",
+                    footer = "Rating On a Scale of 5", icon = "database", width = 12)
+      )
+      output$MHT<- renderbs4ValueBox(
+        bs4ValueBox(value = round(as.numeric(Manual_Hand_Trolley),2), subtitle = "Manual Hand Trolley", status = "success",
+                    footer = "Rating On a Scale of 5", icon = "database", width = 12)
+      )
+      output$Tugger<- renderbs4ValueBox(
+        bs4ValueBox(value = round(as.numeric(Tugger_Cart),2), subtitle = "Tugger Cart", status = "warning",
+                    footer = "Rating On a Scale of 5", icon = "database", width = 12)
+      )
+      output$Forklift<- renderbs4ValueBox(
+        bs4ValueBox(value = round(as.numeric(ForkliftV),2), subtitle = "Forklift", status = "success",
+                    footer = "Rating On a Scale of 5", icon = "database", width = 12)
+      )
+      output$Pallet_JH<- renderbs4ValueBox(
+        bs4ValueBox(value = round(as.numeric(Pallet_Jack_Hand),2), subtitle = "Pallet Jack Hand", status = "warning",
+                    footer = "Rating On a Scale of 5", icon = "database", width = 12)
+      )
+      output$Pallet_JE<-renderbs4ValueBox(
+        bs4ValueBox(value = round(as.numeric(Pallet_Jack_Electric),2), subtitle = "Pallet Jack Electric", status = "success",
+                    footer = "Rating On a Scale of 5", icon = "database", width = 12)
+      )
+      output$Reach_Trucks<- renderbs4ValueBox(
+        bs4ValueBox(value = round(as.numeric(ReachTrucks),2), subtitle = "Reach Trucks", status = "warning",
+                    footer = "Rating On a Scale of 5", icon = "database", width = 12)
+      )
     }
   })
 }

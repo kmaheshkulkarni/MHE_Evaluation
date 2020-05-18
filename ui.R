@@ -44,42 +44,34 @@ bs4DashPage(
       ))      
     ),
     fluidRow(
-      bs4Card(
-        title = "Ratings", width = 12, status = "danger",
-        closable = FALSE, maximizable = TRUE, collapsible = FALSE, height = "500px",
-        fluidRow(4,
-               column(
-                 bs4ValueBoxOutput(outputId = "MaxWt", width = 12)
-               ),
-               column(
-                 bs4ValueBoxOutput(outputId = "P_Cart", width = 12)
-               ),
-               column(
-                 bs4ValueBoxOutput(outputId = "MHT", width = 12)
-               ),
-               column(
-                 bs4ValueBoxOutput(outputId = "Tugger", width = 12)
-               )
+      # bs4Card(
+      #   title = "Ratings", width = 12, status = "danger",
+      #   closable = FALSE, maximizable = TRUE, collapsible = FALSE, height = "500px",
+      
+        # fluidRow(column(4)),
+        fluidRow(
+               column(12,
+                 bs4ValueBoxOutput(outputId = "SChaser", width = 3),
+                        bs4ValueBoxOutput(outputId = "P_Cart", width = 3),
+                        bs4ValueBoxOutput(outputId = "MHT", width = 3),
+                        bs4ValueBoxOutput(outputId = "Tugger", width = 3)
+                 )
+               
+               
                # fluidRow(bs4ValueBox(value = 200, subtitle = "Surface Area", status = "success",
                #                      footer = "Unit in SQ.Ft", icon = "database", width = 12))
         ),
         fluidRow(
-               column(3,
-                 bs4ValueBoxOutput(outputId = "Forklift", width = 12)
-               ),
-               column(3,
-                 bs4ValueBoxOutput(outputId = "Pallet_JH", width = 12)
-               ),
-               column(3,
-                 bs4ValueBoxOutput(outputId = "Pallet_JE", width = 12)
-               ),
-               column(3,
-                 bs4ValueBoxOutput(outputId = "SurfaceArea", width = 12)
+               column(12,
+                      
+                 bs4ValueBoxOutput(outputId = "Forklift", width = 12),
+                 bs4ValueBoxOutput(outputId = "Pallet_JH", width = 12),
+                 bs4ValueBoxOutput(outputId = "Pallet_JE", width = 12),
+                 bs4ValueBoxOutput(outputId = "Reach_Trucks", width = 12)
                )
                # fluidRow(bs4ValueBox(value = 200, subtitle = "Surface Area", status = "success",
                #                      footer = "Unit in SQ.Ft", icon = "database", width = 12))
         )
-      )
     )
   ),
   tags$head(
