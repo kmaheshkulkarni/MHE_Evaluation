@@ -1,0 +1,11 @@
+Max_wt,Dist_Btwn_Src_Destn,Trips_Per_Shift,Aisle_Width,Turning_Radius,Vertical_Reach,Floor Condition
+500,100,200,4,,0,Concrete
+500-1000,100,200,4,,0,Concrete
+10000,1000,400,3,,0,Rough
+10000-13000,1000,400,11,4~8,0,Smooth
+3000- 70000 ,820,74,10,5.5~6,28,Rough_Smooth
+1500,100,200,4,,0,Clean
+5000,250,400,4,,0,Clean
+4500,328,25,10,5,36,Concrete
+50-1000,50000,6250,6,3.5,0,Concrete
+~4500,330,,7.7,4.5,22,Rough_Smooth

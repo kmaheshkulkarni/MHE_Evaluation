@@ -26,32 +26,17 @@ bs4DashPage(
     fluidRow(column(1)),
     fluidRow(
       column(1, pickerInput(
-        inputId = "action_gun_select1",
-        label = "Select Booth",
-        choices = c("LBH Primer Booth"=505,
-                    "LBH Topcoat Booth"=506,
-                    "LBH Touchup Booth"=507
-        ),
+        inputId = "FloorCond",
+        label = "Select Floor", 
+        choices = unique(main$Floor.Condition),
         options = list(`live-search` = TRUE)
-      )),
-      column(2, pickerInput(
-        inputId = "part_desc",
-        label = "Select Part", 
-        choices = parameter_choices1,
-        options = list(`live-search` = TRUE)
-      )),
-      # column(1, textInput("SurfaceTxt", label = "Surface Area in Sq.Ft", value = "")),
-      column(2, textInput("Edft", label = "Enter DFT in mil", value = "")),
-      column(2, textInput("TrnsfEfi", label = "Enter Transfer Efficiency in %", value = "")),
-      column(3, 
-             align="center",
-             dateRangeInput("TheDate","Select Date Range",
-                            start = Sys.Date()-7,
-                            end = Sys.Date(),
-                            max=Sys.Date(),
-                            format = "yyyy-mm-dd",width = "80%"
-             )
-      ),
+      ),align= "center"),
+      column(2, textInput("Trips", label = "Trips Per Shift", value = ""),align= "center"),
+      column(1, textInput("Dist", label = "Distance", value = ""),align= "center"),
+      column(1, textInput("AisleWidth", label = "Aisle Width", value = ""),align= "center"),
+      column(2, textInput("TurnRads", label = "Turning Radius", value = ""),align= "center"),
+      column(2, textInput("VertReach", label = "Vertical Reach", value = ""),align= "center"),
+      column(1, textInput("MaxWt", label = "Max Weight", value = ""),align= "center"),
       column(2, align= "center", actionBttn(
         inputId = "Getinsights",
         label = "Get Insights",
@@ -60,49 +45,9 @@ bs4DashPage(
     ),
     fluidRow(
       bs4Card(
-        title = "Paint Volume Analytics (Units in CC)", width = 12, status = "danger",
-        closable = FALSE, maximizable = TRUE, collapsible = FALSE, height = "500px",
-        fluidRow(
-          column(4,h2("Theoretical Paint Consumption"), echarts4rOutput("TheoPaint") %>% withSpinner(color="#ffc107")),
-          
-          column(4,h2("Actual Paint Consumption"), echarts4rOutput("ActPaint") %>% withSpinner(color="#ffc107")),
-          
-          column(4,h2("Delta Paint Consumption"), echarts4rOutput("Delta") %>% withSpinner(color="#ffc107"))
-        )
+        title = "Ratings", width = 12, status = "danger",
+        closable = FALSE, maximizable = TRUE, collapsible = FALSE, height = "500px"
       )
-    ),
-    
-    fluidRow(
-      column(8,
-             bs4Card(
-               inputId = "spc",
-               title = "SPC Chart", 
-               width = 12,
-               status = "danger", 
-               closable = FALSE,
-               maximizable = TRUE, 
-               collapsible = TRUE,
-               height = "650px",
-               plotlyOutput("spc_plot", height = "550px")%>% withSpinner(color="#ffc107")
-             )
-      ),
-      column(4,
-             fluidRow(
-               bs4ValueBoxOutput(outputId = "USLV", width = 12)
-             ),
-             fluidRow(
-               bs4ValueBoxOutput(outputId = "LSLV", width = 12)
-             ),
-             fluidRow(
-               bs4ValueBoxOutput(outputId = "MeanActConsm", width = 12)
-             ),
-             fluidRow(
-               bs4ValueBoxOutput(outputId = "SurfaceArea", width = 12)
-             )
-             # fluidRow(bs4ValueBox(value = 200, subtitle = "Surface Area", status = "success",
-             #                      footer = "Unit in SQ.Ft", icon = "database", width = 12))
-      )
-      
     )
   ),
   tags$head(

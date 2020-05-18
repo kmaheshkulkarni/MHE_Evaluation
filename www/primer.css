@@ -71,6 +71,7 @@
 label:not(.form-check-label):not(.custom-file-label) {
     color: #195030;
     margin-top: 25px;
+    font-size: 15px;
 }
 navbar-dark .navbar-nav .nav-link {
     color: #ffc107;
