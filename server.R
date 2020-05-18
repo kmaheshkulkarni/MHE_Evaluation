@@ -30,8 +30,7 @@ function(input, output, session){
       
       dsm$Dist_Btwn_Src_Destn<- ifelse(input$Dist <= 150, 5, ifelse(input$Dist >= 151 & input$Dist <= 300, 4,
                                 ifelse(input$Dist >= 301 & input$Dist <= 500, 3, ifelse(input$Dist >= 501 & 
-                                input$Dist <= 1000, ifelse(input$Dist >= 1001 & input$Dist <= 2000, 2,
-                                ifelse(input$Dist >=2001 & input$Dist <= 5000, 1, 0))))))
+                                input$Dist <= 1000,2, ifelse(input$Dist >= 1001 & input$Dist <= 2000, 1, 0)))))
       
       dsm$Trips_Per_Shift<- ifelse(input$Trips <=100, 5, ifelse(input$Trips >= 101 & input$Trips <= 200, 4,
                             ifelse(input$Trips >=201 & input$Trips <= 500, 3, ifelse(input$Trips >= 501 &

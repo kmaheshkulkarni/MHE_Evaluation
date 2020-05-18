@@ -97,15 +97,16 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
     background: #ffc107;
     margin-top: 49px;
 }
-.small-box>.inner {
-    padding: 15px;
-    font-size: 30px;
-    margin-top: 40px;
-}
 .small-box h3, .small-box p {
     z-index: 5;
     font-weight: 600;
     font-size: large;
+}
+.small-box>.inner {
+    padding: 10px;
+    font-size: 30px;
+    margin-top: 40px;
+    width: 550px;
 }
 .card-danger:not(.card-outline)>.card-header {
     background-color: #ffc107;
