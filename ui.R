@@ -28,7 +28,7 @@ bs4DashPage(
       column(1, pickerInput(
         inputId = "FloorCond",
         label = "Select Floor", 
-        choices = unique(main$Floor.Condition),
+        choices = c("Concrete", "Rough", "Smooth", "Rough_Smooth", "Clean"),
         options = list(`live-search` = TRUE)
       ),align= "center"),
       column(2, textInput("Trips", label = "Trips Per Shift", value = ""),align= "center"),
