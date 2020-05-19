@@ -32,11 +32,11 @@ bs4DashPage(
         options = list(`live-search` = TRUE)
       ),align= "center"),
       column(2, textInput("Trips", label = "Trips Per Shift", value = ""),align= "center"),
-      column(1, textInput("Dist", label = "Distance", value = ""),align= "center"),
-      column(1, textInput("AisleWidth", label = "Aisle Width", value = ""),align= "center"),
-      column(2, textInput("TurnRads", label = "Turning Radius", value = ""),align= "center"),
-      column(2, textInput("VertReach", label = "Vertical Reach", value = ""),align= "center"),
-      column(1, textInput("MaxWt", label = "Max Weight", value = ""),align= "center"),
+      column(1, textInput("Dist", label = "Distance (Ft)", value = ""),align= "center"),
+      column(1, textInput("AisleWidth", label = "Aisle Width (Ft)", value = ""),align= "center"),
+      column(2, textInput("TurnRads", label = "Turning Radius (Ft)", value = ""),align= "center"),
+      column(2, textInput("VertReach", label = "Vertical Reach (Ft)", value = ""),align= "center"),
+      column(1, textInput("MaxWt", label = "Max Weight (lbs)", value = ""),align= "center"),
       column(2, align= "center", actionBttn(
         inputId = "Getinsights",
         label = "Get Insights",

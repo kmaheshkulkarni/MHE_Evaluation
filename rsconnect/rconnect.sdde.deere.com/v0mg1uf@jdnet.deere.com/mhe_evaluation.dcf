@@ -1,0 +1,12 @@
+name: mhe_evaluation
+title: MHE_Evaluation
+username: v0mg1uf@jdnet.deere.com
+account: v0mg1uf@jdnet.deere.com
+server: rconnect.sdde.deere.com
+hostUrl: https://rconnect.sdde.deere.com/__api__
+appId: 427
+bundleId: 2023
+url: https://rconnect.sdde.deere.com/content/427/
+when: 1589886261.46448
+asMultiple: FALSE
+asStatic: FALSE
